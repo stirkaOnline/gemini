@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zoom to Gemini to Telegram</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="/socket.io/socket.io.js"></script>
+  <script defer src="/js/app.js"></script>
+</head>
+<body>
+  <div id="configFormContainer">
+    <h1>Получить отчет о встречах в телеграм</h1>
+    <form id="configForm">
+      <label>Ключ API Zoom:</label>
+      <input type="text" id="zoomApiKey" required><br>
+      <label>Ключ API Gemini:</label>
+      <input type="text" id="geminiApiKey" required><br>
+      <label>Запрос для Gemini:</label>
+      <input type="text" id="geminiPrompt" required><br>
+      <label>Настройки Gemini (формат JSON):</label>
+      <textarea id="geminiSettings" required></textarea><br>
+      <label>Токен Telegram-бота::</label>
+      <input type="text" id="telegramBotToken" required><br>
+      <label>Идентификатор чата Telegram:</label>
+      <input type="text" id="telegramChatID" required><br>
+      <button type="submit">Сохранить настройки</button>
+    </form>
+  </div>
+  <div id="errorDisplay" style="color: red;"></div>
+</body>
+</html>
